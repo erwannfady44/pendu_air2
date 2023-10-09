@@ -1,5 +1,6 @@
 import random, mots
 
+
 def affiche_pendu(erreurs):
     pendu = []
 
@@ -110,9 +111,49 @@ def affiche_pendu(erreurs):
 
     for ligne in pendu:
         print(ligne)
+
+
 def choix_mot():
     return mots.mots.__getitem__(random.randint(0, len(mots.mots) - 1))
+
+
 if __name__ == '__main__':
-    print(choix_mot())
+    mot = choix_mot()
+    trouve = ""
+    lettres = []
+    perdu = False
 
+    for l in mot:
+        if (l == " "):
+            trouve += ' '
+        else:
+            trouve += '_'
+    print(trouve)
 
+    while mot != trouve and not perdu:
+        l = input("Entrer une lettre \n")
+
+        if (l in mot):
+            indices = []
+            n = 0
+            for m in mot:
+                if m == l:
+                    indices.append(n)
+                n += 1
+            for i in indices:
+                trouve = trouve[:i] + l + trouve[i + 1:]
+            print(trouve)
+        else:
+            if l not in lettres or len(lettres) == 0:
+                lettres.append(l)
+                print(trouve)
+                print(lettres)
+                print("\n\n")
+                affiche_pendu(len(lettres))
+
+                if (len(lettres) >= 11):
+                    print("PERDU !!!")
+            else:
+                print("déjà entré")
+
+    print("GAGNE !!!")
