@@ -1,5 +1,7 @@
-import random, mots
+import mots
+import random
 
+#Fonction qui affiche le dessin du pendu
 def affiche_pendu(erreurs):
     pendu = []
 
@@ -110,8 +112,12 @@ def affiche_pendu(erreurs):
 
     for ligne in pendu:
         print(ligne)
+
+#Fonction qui choisi un mot aléatoire
 def choix_mot():
     return mots.mots.__getitem__(random.randint(0, len(mots.mots) - 1))
+
+#Fonction du jeu
 if __name__ == '__main__':
     print(choix_mot())
 
