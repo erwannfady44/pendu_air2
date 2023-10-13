@@ -18,8 +18,8 @@
   - Regarder si le joueur a perdu
 
 ## Fonctions utiles :
-- Choisir un mot : ```python choix_mot()```
-- Afficher le pendu : ```python affiche_pendu(2)```
-- Demander une lettre au joueur : ```python input("Entrer une lettre \n")```
-- Comparer avec le mot mystère : ```python if l in mot: ```
-- Afficher du texte : ```python print(variable)```
+- Choisir un mot : ```choix_mot()```
+- Afficher le pendu : ```affiche_pendu(2)```
+- Demander une lettre au joueur : ```input("Entrer une lettre \n")```
+- Comparer avec le mot mystère : ```if l in mot: ```
+- Afficher du texte : ```print(variable)```
