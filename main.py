@@ -117,6 +117,10 @@ def affiche_pendu(erreurs):
 def choix_mot():
     return mots.mots.__getitem__(random.randint(0, len(mots.mots) - 1))
 
+def remplacer_caractere(mot, postition, caractere):
+    return mot[:postition] + caractere + mot[postition + 1:]
+
+
 #Fonction du jeu
 if __name__ == '__main__':
     print(choix_mot())
